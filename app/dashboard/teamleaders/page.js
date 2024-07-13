@@ -3,8 +3,9 @@ import React, { useState } from "react";
 import { IoReload } from "react-icons/io5";
 import Link from "next/link";
 import { MdDelete } from "react-icons/md";
+import { GrFormView } from "react-icons/gr";
 import { CiEdit } from "react-icons/ci";
-const Page = () => {
+export const Page = () => {
   const [search, setSearch] = useState("");
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -13,11 +14,11 @@ const Page = () => {
     }
   };
   return (
-    <div>
-      <div className="flex items-center">
-        <div className="bg-yellow-500 rounded-[5px] ml-5 h-[30px] w-[10px]"></div>
-        <div className="text-xl font-bold mx-2 my-8">Leave Requests</div>
-      </div>
+    <div className="">
+    <div className="flex items-center">
+    <div className="bg-yellow-500 rounded-[5px] ml-5 h-[30px] w-[10px]"></div>
+    <div className="text-xl font-bold mx-2 my-8">Team Leaders</div>
+  </div>
       <div className="flex justify-between">
         <div className={` flex items-center`}>
           <input
@@ -35,13 +36,13 @@ const Page = () => {
             <IoReload className="cursor-pointer text-xl mx-5" />
           </div>
         </div>
-        <Link href="/dashboard/users/add">
+        <Link href="/dashboard/teamleaders/add">
           <button className="bg-blue-800 text-white p-3 m-5 text-sm rounded-lg">
             Add New
           </button>
         </Link>
       </div>
-      <div className="relative overflow-x-auto m-5 mb-0 ">
+      <div className="relative overflow-x-auto m-5 mb-0">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500  ">
           <thead className="text-xs text-gray-700 uppercase bg-gray-200">
             <tr>
@@ -52,22 +53,16 @@ const Page = () => {
                 Full name
               </th>
               <th scope="col" className="px-6 py-3">
-                Leave Type
+                Contact
               </th>
               <th scope="col" className="px-6 py-3">
-                Leave From
+                email
               </th>
               <th scope="col" className="px-6 py-3">
-                Leave To
+                Organisation
               </th>
               <th scope="col" className="px-6 py-3">
-                No. of Days
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Status
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Reason
+                Joining Date
               </th>
               <th scope="col" className="px-6 py-3">
                 Action
@@ -86,25 +81,32 @@ const Page = () => {
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
               >
-                John doe
+                John Doe
               </th>
-              <td className="px-6 py-4">Medical leave</td>
-              <td className="px-6 py-4">15/07/2024</td>
-              <td className="px-6 py-4">17/07/2024</td>
-              <td className="px-6 py-4">2 Days</td>
-              <td className="px-6 py-4">Approved</td>
-              <td className="px-6 py-4">Fever</td>
-              <td className="flex relative py-4 px-5">
+              <td className="px-6 py-4">9053458214</td>
+              <td className="px-6 py-4">doe@gmail.com</td>
+              <td className="px-6 py-4">Developer</td>
+              <td className="px-6 py-4">01/07/2024</td>
+              <td className="flex py-2  items-center gap-1">
                 <Link
                   href={{
-                    pathname: `/dashboard/leaverequests/edit/[id]`,
+                    pathname: `/dashboard/teamleaders/view/[id]`,
+                    query: { id: 12345 },
+                  }}
+                  as={`/dashboard/teamleaders/view/${12345}`}
+                >
+                  <GrFormView className="text-3xl cursor-pointer" />
+                </Link>
+                <Link
+                  href={{
+                    pathname: `/dashboard/teamleaders/edit/[id]`,
                     query: {
                       id: 2131532,
                     },
                   }}
-                  as={`/dashboard/leaverequests/edit/${2131532}`}
+                  as={`/dashboard/teamleaders/edit/${2131532}`}
                 >
-                  <CiEdit className="text-2xl mr-2 cursor-pointer" /> 
+                  <CiEdit className="text-2xl cursor-pointer" />
                 </Link>
                 <MdDelete className="text-2xl cursor-pointer" />
               </td>
@@ -120,25 +122,32 @@ const Page = () => {
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
               >
-                John doe
+                John Doe
               </th>
-              <td className="px-6 py-4">Medical leave</td>
-              <td className="px-6 py-4">15/07/2024</td>
-              <td className="px-6 py-4">17/07/2024</td>
-              <td className="px-6 py-4">2 Days</td>
-              <td className="px-6 py-4">Approved</td>
-              <td className="px-6 py-4">Fever</td>
-              <td className="flex relative py-4 px-5">
+              <td className="px-6 py-4">9053458214</td>
+              <td className="px-6 py-4">doe@gmail.com</td>
+              <td className="px-6 py-4">Developer</td>
+              <td className="px-6 py-4">01/07/2024</td>
+              <td className="flex py-2  items-center gap-1">
                 <Link
                   href={{
-                    pathname: `/dashboard/leaverequests/edit/[id]`,
+                    pathname: `/dashboard/teamleaders/view/[id]`,
+                    query: { id: 12345 },
+                  }}
+                  as={`/dashboard/teamleaders/view/${12345}`}
+                >
+                  <GrFormView className="text-3xl cursor-pointer" />
+                </Link>
+                <Link
+                  href={{
+                    pathname: `/dashboard/teamleaders/edit/[id]`,
                     query: {
                       id: 2131532,
                     },
                   }}
-                  as={`/dashboard/leaverequests/edit/${2131532}`}
+                  as={`/dashboard/teamleaders/edit/${2131532}`}
                 >
-                  <CiEdit className="text-2xl mr-2 cursor-pointer" />
+                  <CiEdit className="text-2xl cursor-pointer" />
                 </Link>
                 <MdDelete className="text-2xl cursor-pointer" />
               </td>
@@ -154,25 +163,32 @@ const Page = () => {
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
               >
-                John doe
+                John Doe
               </th>
-              <td className="px-6 py-4">Medical leave</td>
-              <td className="px-6 py-4">15/07/2024</td>
-              <td className="px-6 py-4">17/07/2024</td>
-              <td className="px-6 py-4">2 Days</td>
-              <td className="px-6 py-4">Approved</td>
-              <td className="px-6 py-4">Fever</td>
-              <td className="flex relative py-4 px-5">
+              <td className="px-6 py-4">9053458214</td>
+              <td className="px-6 py-4">doe@gmail.com</td>
+              <td className="px-6 py-4">Developer</td>
+              <td className="px-6 py-4">01/07/2024</td>
+              <td className="flex py-2  items-center gap-1">
                 <Link
                   href={{
-                    pathname: `/dashboard/leaverequests/edit/[id]`,
+                    pathname: `/dashboard/teamleaders/view/[id]`,
+                    query: { id: 12345 },
+                  }}
+                  as={`/dashboard/teamleaders/view/${12345}`}
+                >
+                  <GrFormView className="text-3xl cursor-pointer" />
+                </Link>
+                <Link
+                  href={{
+                    pathname: `/dashboard/teamleaders/edit/[id]`,
                     query: {
                       id: 2131532,
                     },
                   }}
-                  as={`/dashboard/leaverequests/edit/${2131532}`}
+                  as={`/dashboard/teamleaders/edit/${2131532}`}
                 >
-                  <CiEdit className="text-2xl mr-2 cursor-pointer" />
+                  <CiEdit className="text-2xl cursor-pointer" />
                 </Link>
                 <MdDelete className="text-2xl cursor-pointer" />
               </td>

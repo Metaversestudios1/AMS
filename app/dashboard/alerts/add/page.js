@@ -42,7 +42,7 @@ const Page = () => {
             htmlFor="message"
             className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
           >
-            Confirm password
+            Message
           </label>
           <textarea
             rows="4"

@@ -99,12 +99,14 @@ const Sidebar = () => {
                     data-hs-accordion-always-open
                   >
                     <li className="hs-accordion" id="users-accordion-sub-1">
-                      <button
-                        type="button"
-                        className="hs-accordion-toggle hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-700 rounded-lg hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-300 dark:hs-accordion-active:text-white"
-                      >
-                        Team Members
-                      </button>
+                    <Link href = "/dashboard/teamleaders">
+                    <button
+                    type="button"
+                    className="hs-accordion-toggle hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-700 rounded-lg hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-300 dark:hs-accordion-active:text-white"
+                    >
+                    Team Leaders
+                    </button>
+                    </Link>
 
                     </li>
                     <li className="hs-accordion" id="users-accordion-sub-2">
@@ -157,13 +159,14 @@ const Sidebar = () => {
                     data-hs-accordion-always-open
                   >
                     <li className="hs-accordion" id="users-accordion-sub-1">
+                    <Link href="/dashboard/leavehistory">
                       <button
                         type="button"
                         className="hs-accordion-toggle hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-gray-700 rounded-lg hover:bg-gray-100 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-300 dark:hs-accordion-active:text-white"
                       >
                         Leaves history
                       </button>
-
+                      </Link>
                     </li>
                     <li className="hs-accordion" id="users-accordion-sub-2">
                     <Link href="/dashboard/leaverequests">
@@ -200,7 +203,7 @@ const Sidebar = () => {
                     className="hs-accordion-group ps-3 pt-2"
                     data-hs-accordion-always-open
                   >
-                    <li className="hs-accordion" id="users-accordion-sub-1">
+                    {/*<li className="hs-accordion" id="users-accordion-sub-1">
                     <Link href="/dashboard/payroll/employeesalary">
                     <button
                     type="button"
@@ -210,7 +213,7 @@ const Sidebar = () => {
                     </button>
                     </Link>
 
-                    </li>
+                    </li>*/}
                     <li className="hs-accordion" id="users-accordion-sub-1">
                     <Link href="/dashboard/attendance/attendancesheet">
                     <button

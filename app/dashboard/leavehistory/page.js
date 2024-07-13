@@ -6,6 +6,8 @@ import { MdDelete } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 const Page = () => {
   const [search, setSearch] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
   const handleChange = (e) => {
     const { name, value } = e.target;
     if (name == "search") {
@@ -16,8 +18,9 @@ const Page = () => {
     <div>
       <div className="flex items-center">
         <div className="bg-yellow-500 rounded-[5px] ml-5 h-[30px] w-[10px]"></div>
-        <div className="text-xl font-bold mx-2 my-8">Leave Requests</div>
+        <div className="text-xl font-bold mx-2 my-8">Leave History</div>
       </div>
+      
       <div className="flex justify-between">
         <div className={` flex items-center`}>
           <input
@@ -41,6 +44,34 @@ const Page = () => {
           </button>
         </Link>
       </div>
+      <div className={` flex  mx-5`}>
+        <div className="flex flex-col ">
+          <label htmlFor="startdate" className="text-sm my-2">
+            Start date:
+          </label>
+          <input
+            type="date"
+            placeholder="Start Date"
+            value={startDate}
+            onChange={(e) => setStartDate(e.target.value)}
+            className="p-2 rounded mr-2 bg-gray-200"
+            id="startdate"
+          />
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="enddate" className="text-sm my-2">
+            End date:
+          </label>
+          <input
+            type="date"
+            placeholder="End Date"
+            value={endDate}
+            onChange={(e) => setEndDate(e.target.value)}
+            className="p-2 rounded bg-gray-200"
+            id="enddate"
+          />
+        </div>
+        </div>
       <div className="relative overflow-x-auto m-5 mb-0 ">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500  ">
           <thead className="text-xs text-gray-700 uppercase bg-gray-200">

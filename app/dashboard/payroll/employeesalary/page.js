@@ -86,12 +86,12 @@ const Page = () => {
           <td className="flex p-3  items-center gap-1">
             <Link
               href={{
-                pathname: `/dashboard/users/edit/[id]`,
+                pathname: `/dashboard/payroll/employeesalary/edit/[id]`,
                 query: {
                   id: 2131532,
                 },
               }}
-              as={`/dashboard/users/edit/${2131532}`}
+              as={`/dashboard/payroll/employeesalaryy/edit/${2131532}`}
             >
               <CiEdit className="text-2xl cursor-pointer" />
             </Link>
@@ -117,12 +117,12 @@ const Page = () => {
           <td className="flex p-3 items-center gap-1">
             <Link
               href={{
-                pathname: `/dashboard/users/edit/[id]`,
+                pathname: `/dashboard/payroll/employeesalary/edit/[id]`,
                 query: {
                   id: 2131532,
                 },
               }}
-              as={`/dashboard/users/edit/${2131532}`}
+              as={`/dashboard/payroll/employeesalary/edit/${2131532}`}
             >
               <CiEdit className="text-2xl cursor-pointer" />
             </Link>
@@ -148,12 +148,12 @@ const Page = () => {
           <td className="flex p-3 items-center gap-1">
             <Link
               href={{
-                pathname: `/dashboard/users/edit/[id]`,
+                pathname: `/dashboard/payroll/employeesalary/edit/[id]`,
                 query: {
                   id: 2131532,
                 },
               }}
-              as={`/dashboard/users/edit/${2131532}`}
+              as={`/dashboard/payroll/employeesalary/edit/${2131532}`}
             >
               <CiEdit className="text-2xl cursor-pointer" />
             </Link>
