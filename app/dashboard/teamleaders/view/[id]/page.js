@@ -10,52 +10,52 @@ const Page = () => {
 
   return (
     <div>
-      <div class="bg-gray-100">
-        <div class="container mx-auto py-8">
-          <div class="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
-            <div class="col-span-4 sm:col-span-3">
-              <div class="bg-white shadow rounded-lg p-6">
-                <div class="flex flex-col items-center">
+      <div className="bg-gray-100">
+        <div className="container mx-auto py-8">
+          <div className="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
+            <div className="col-span-4 sm:col-span-3">
+              <div className="bg-white shadow rounded-lg p-6">
+                <div className="flex flex-col items-center">
                   <img
                     src="https://randomuser.me/api/portraits/men/94.jpg"
-                    class="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"
+                    className="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"
                   ></img>
-                  <h1 class="text-xl font-bold">John Doe</h1>
-                  <p class="text-gray-700">Software Developer</p>
-                  <div class="mt-6 flex flex-wrap gap-4 justify-center">
+                  <h1 className="text-xl font-bold">John Doe</h1>
+                  <p className="text-gray-700">Software Developer</p>
+                  <div className="mt-6 flex flex-wrap gap-4 justify-center">
                     <a
                       href="#"
-                      class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
+                      className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
                     >
                       Contact
                     </a>
                     <a
                       href="#"
-                      class="bg-gray-300 hover:bg-gray-400 text-gray-700 py-2 px-4 rounded"
+                      className="bg-gray-300 hover:bg-gray-400 text-gray-700 py-2 px-4 rounded"
                     >
                       Resume
                     </a>
                   </div>
                 </div>
-                <hr class="my-6 border-t border-gray-300" />
-                <div class="flex flex-col">
-                  <span class="text-gray-700 uppercase font-bold tracking-wider mb-2">
+                <hr className="my-6 border-t border-gray-300" />
+                <div className="flex flex-col">
+                  <span className="text-gray-700 uppercase font-bold tracking-wider mb-2">
                     Skills
                   </span>
                   <ul>
-                    <li class="mb-2">JavaScript</li>
-                    <li class="mb-2">React</li>
-                    <li class="mb-2">Node.js</li>
-                    <li class="mb-2">HTML/CSS</li>
-                    <li class="mb-2">Tailwind Css</li>
+                    <li className="mb-2">JavaScript</li>
+                    <li className="mb-2">React</li>
+                    <li className="mb-2">Node.js</li>
+                    <li className="mb-2">HTML/CSS</li>
+                    <li className="mb-2">Tailwind Css</li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="col-span-4 sm:col-span-9">
-              <div class="bg-white shadow rounded-lg p-6">
-                <h2 class="text-xl font-bold mb-4">About Me</h2>
-                <p class="text-gray-700">
+            <div className="col-span-4 sm:col-span-9">
+              <div className="bg-white shadow rounded-lg p-6">
+                <h2 className="text-xl font-bold mb-4">About Me</h2>
+                <p className="text-gray-700">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                   finibus est vitae tortor ullamcorper, ut vestibulum velit
                   convallis. Aenean posuere risus non velit egestas suscipit.
@@ -65,10 +65,10 @@ const Page = () => {
                   luctus risus rhoncus id.
                 </p>
 
-                <h3 class="font-semibold text-center mt-3 -mb-2">Find me on</h3>
-                <div class="flex justify-center items-center gap-6 my-6">
+                <h3 className="font-semibold text-center mt-3 -mb-2">Find me on</h3>
+                <div className="flex justify-center items-center gap-6 my-6">
                   <a
-                    class="text-gray-700 hover:text-orange-600"
+                    className="text-gray-700 hover:text-orange-600"
                     aria-label="Visit TrendyMinds LinkedIn"
                     href=""
                     target="_blank"
@@ -76,7 +76,7 @@ const Page = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 448 512"
-                      class="h-6"
+                      className="h-6"
                     >
                       <path
                         fill="currentColor"
@@ -85,7 +85,7 @@ const Page = () => {
                     </svg>
                   </a>
                   <a
-                    class="text-gray-700 hover:text-orange-600"
+                    className="text-gray-700 hover:text-orange-600"
                     aria-label="Visit TrendyMinds YouTube"
                     href=""
                     target="_blank"
@@ -93,7 +93,7 @@ const Page = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 576 512"
-                      class="h-6"
+                      className="h-6"
                     >
                       <path
                         fill="currentColor"
@@ -102,7 +102,7 @@ const Page = () => {
                     </svg>
                   </a>
                   <a
-                    class="text-gray-700 hover:text-orange-600"
+                    className="text-gray-700 hover:text-orange-600"
                     aria-label="Visit TrendyMinds Facebook"
                     href=""
                     target="_blank"
@@ -110,7 +110,7 @@ const Page = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 320 512"
-                      class="h-6"
+                      className="h-6"
                     >
                       <path
                         fill="currentColor"
@@ -119,7 +119,7 @@ const Page = () => {
                     </svg>
                   </a>
                   <a
-                    class="text-gray-700 hover:text-orange-600"
+                    className="text-gray-700 hover:text-orange-600"
                     aria-label="Visit TrendyMinds Instagram"
                     href=""
                     target="_blank"
@@ -127,7 +127,7 @@ const Page = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 448 512"
-                      class="h-6"
+                      className="h-6"
                     >
                       <path
                         fill="currentColor"
@@ -136,13 +136,13 @@ const Page = () => {
                     </svg>
                   </a>
                   <a
-                    class="text-gray-700 hover:text-orange-600"
+                    className="text-gray-700 hover:text-orange-600"
                     aria-label="Visit TrendyMinds Twitter"
                     href=""
                     target="_blank"
                   >
                     <svg
-                      class="h-6"
+                      className="h-6"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
                     >
@@ -154,44 +154,44 @@ const Page = () => {
                   </a>
                 </div>
 
-                <h2 class="text-xl font-bold mt-6 mb-4">Experience</h2>
-                <div class="mb-6">
-                  <div class="flex justify-between flex-wrap gap-2 w-full">
-                    <span class="text-gray-700 font-bold">Web Developer</span>
+                <h2 className="text-xl font-bold mt-6 mb-4">Experience</h2>
+                <div className="mb-6">
+                  <div className="flex justify-between flex-wrap gap-2 w-full">
+                    <span className="text-gray-700 font-bold">Web Developer</span>
                     <p>
-                      <span class="text-gray-700 mr-2">at ABC Company</span>
-                      <span class="text-gray-700">2017 - 2019</span>
+                      <span className="text-gray-700 mr-2">at ABC Company</span>
+                      <span className="text-gray-700">2017 - 2019</span>
                     </p>
                   </div>
-                  <p class="mt-2">
+                  <p className="mt-2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     finibus est vitae tortor ullamcorper, ut vestibulum velit
                     convallis. Aenean posuere risus non velit egestas suscipit.
                   </p>
                 </div>
-                <div class="mb-6">
-                  <div class="flex justify-between flex-wrap gap-2 w-full">
-                    <span class="text-gray-700 font-bold">Web Developer</span>
+                <div className="mb-6">
+                  <div className="flex justify-between flex-wrap gap-2 w-full">
+                    <span className="text-gray-700 font-bold">Web Developer</span>
                     <p>
-                      <span class="text-gray-700 mr-2">at ABC Company</span>
-                      <span class="text-gray-700">2017 - 2019</span>
+                      <span className="text-gray-700 mr-2">at ABC Company</span>
+                      <span className="text-gray-700">2017 - 2019</span>
                     </p>
                   </div>
-                  <p class="mt-2">
+                  <p className="mt-2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     finibus est vitae tortor ullamcorper, ut vestibulum velit
                     convallis. Aenean posuere risus non velit egestas suscipit.
                   </p>
                 </div>
-                <div class="mb-6">
-                  <div class="flex justify-between flex-wrap gap-2 w-full">
-                    <span class="text-gray-700 font-bold">Web Developer</span>
+                <div className="mb-6">
+                  <div className="flex justify-between flex-wrap gap-2 w-full">
+                    <span className="text-gray-700 font-bold">Web Developer</span>
                     <p>
-                      <span class="text-gray-700 mr-2">at ABC Company</span>
-                      <span class="text-gray-700">2017 - 2019</span>
+                      <span className="text-gray-700 mr-2">at ABC Company</span>
+                      <span className="text-gray-700">2017 - 2019</span>
                     </p>
                   </div>
-                  <p class="mt-2">
+                  <p className="mt-2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     finibus est vitae tortor ullamcorper, ut vestibulum velit
                     convallis. Aenean posuere risus non velit egestas suscipit.
