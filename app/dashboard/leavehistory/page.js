@@ -100,9 +100,7 @@ const Page = () => {
               <th scope="col" className="px-6 py-3">
                 Reason
               </th>
-              <th scope="col" className="px-6 py-3">
-                Action
-              </th>
+              
             </tr>
           </thead>
           <tbody>
@@ -125,20 +123,7 @@ const Page = () => {
               <td className="px-6 py-4">2 Days</td>
               <td className="px-6 py-4">Approved</td>
               <td className="px-6 py-4">Fever</td>
-              <td className="flex relative py-4 px-5">
-                <Link
-                  href={{
-                    pathname: `/dashboard/leaverequests/edit/[id]`,
-                    query: {
-                      id: 2131532,
-                    },
-                  }}
-                  as={`/dashboard/leaverequests/edit/${2131532}`}
-                >
-                  <CiEdit className="text-2xl mr-2 cursor-pointer" /> 
-                </Link>
-                <MdDelete className="text-2xl cursor-pointer" />
-              </td>
+              
             </tr>
             <tr className="bg-white border-b ">
               <th
@@ -159,20 +144,7 @@ const Page = () => {
               <td className="px-6 py-4">2 Days</td>
               <td className="px-6 py-4">Approved</td>
               <td className="px-6 py-4">Fever</td>
-              <td className="flex relative py-4 px-5">
-                <Link
-                  href={{
-                    pathname: `/dashboard/leaverequests/edit/[id]`,
-                    query: {
-                      id: 2131532,
-                    },
-                  }}
-                  as={`/dashboard/leaverequests/edit/${2131532}`}
-                >
-                  <CiEdit className="text-2xl mr-2 cursor-pointer" />
-                </Link>
-                <MdDelete className="text-2xl cursor-pointer" />
-              </td>
+              
             </tr>
             <tr className="bg-white border-b ">
               <th
@@ -193,20 +165,7 @@ const Page = () => {
               <td className="px-6 py-4">2 Days</td>
               <td className="px-6 py-4">Approved</td>
               <td className="px-6 py-4">Fever</td>
-              <td className="flex relative py-4 px-5">
-                <Link
-                  href={{
-                    pathname: `/dashboard/leaverequests/edit/[id]`,
-                    query: {
-                      id: 2131532,
-                    },
-                  }}
-                  as={`/dashboard/leaverequests/edit/${2131532}`}
-                >
-                  <CiEdit className="text-2xl mr-2 cursor-pointer" />
-                </Link>
-                <MdDelete className="text-2xl cursor-pointer" />
-              </td>
+              
             </tr>
           </tbody>
         </table>
