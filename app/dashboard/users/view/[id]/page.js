@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 const Page = () => {
 
@@ -16,10 +17,12 @@ const Page = () => {
             <div className="col-span-4 sm:col-span-3">
               <div className="bg-white shadow rounded-lg p-6">
                 <div className="flex flex-col items-center">
-                  <img
+                  <Image
+                  width={100}
+                  height={100}
                     src="https://randomuser.me/api/portraits/men/94.jpg"
                     className="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"
-                  ></img>
+                  ></Image>
                   <h1 className="text-xl font-bold">John Doe</h1>
                   <p className="text-gray-700">Software Developer</p>
                   <div className="mt-6 flex flex-wrap gap-4 justify-center">
