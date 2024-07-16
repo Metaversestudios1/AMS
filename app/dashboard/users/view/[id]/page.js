@@ -20,6 +20,7 @@ const Page = () => {
                   <Image
                   width={100}
                   height={100}
+                  alt="image"
                     src="https://randomuser.me/api/portraits/men/94.jpg"
                     className="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"
                   ></Image>
