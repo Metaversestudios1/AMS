@@ -1,18 +1,45 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoReload } from "react-icons/io5";
 import Link from "next/link";
 import { MdDelete } from "react-icons/md";
 import { GrFormView } from "react-icons/gr";
 import { CiEdit } from "react-icons/ci";
 export const Page = () => {
+
+  const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
+
+  useEffect(()=>{
+    const fetchData = async ()=>{
+      const res = await fetch("/api/getusers")
+      const response  = await res.json()
+      setUsers(response.data)
+    }
+    fetchData()
+  },[])
   const handleChange = (e) => {
     const { name, value } = e.target;
     if (name == "search") {
       setSearch(value);
     }
   };
+  const handleDelete = async(e,id) =>{
+    e.preventDefault()
+    const res = await fetch("/api/deleteuser",  { method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    });
+    if (!res.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const response = await res.json();
+    if(response.success) {
+      const updatedUsers = users.filter((item)=>item.emp_id!=id)
+      setUsers(updatedUsers)
+    }
+
+  }
   return (
     <div className="">
     <div className="flex items-center">
@@ -70,129 +97,52 @@ export const Page = () => {
             </tr>
           </thead>
           <tbody>
-            <tr className="bg-white border-b ">
-              <th
-                scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
-              >
-                1.
-              </th>
-              <th
-                scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
-              >
-                John Doe
-              </th>
-              <td className="px-6 py-4">9053458214</td>
-              <td className="px-6 py-4">doe@gmail.com</td>
-              <td className="px-6 py-4">Developer</td>
-              <td className="px-6 py-4">01/07/2024</td>
-              <td className="flex py-2  items-center gap-1">
-                <Link
-                  href={{
-                    pathname: `/dashboard/users/view/[id]`,
-                    query: { id: 12345 },
-                  }}
-                  as={`/dashboard/users/view/${12345}`}
+            {
+              users.map((item, index)=>{
+
+                return (<tr key={item._id} className="bg-white border-b ">
+                <th
+                  scope="row"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
                 >
-                  <GrFormView className="text-3xl cursor-pointer" />
-                </Link>
-                <Link
-                  href={{
-                    pathname: `/dashboard/users/edit/[id]`,
-                    query: {
-                      id: 2131532,
-                    },
-                  }}
-                  as={`/dashboard/users/edit/${2131532}`}
+                  {index+1}
+                </th>
+                <th
+                  scope="row"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
                 >
-                  <CiEdit className="text-2xl cursor-pointer" />
-                </Link>
-                <MdDelete className="text-2xl cursor-pointer" />
-              </td>
-            </tr>
-            <tr className="bg-white border-b ">
-              <th
-                scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
-              >
-                1.
-              </th>
-              <th
-                scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
-              >
-                John Doe
-              </th>
-              <td className="px-6 py-4">9053458214</td>
-              <td className="px-6 py-4">doe@gmail.com</td>
-              <td className="px-6 py-4">Developer</td>
-              <td className="px-6 py-4">01/07/2024</td>
-              <td className="flex py-2  items-center gap-1">
-                <Link
-                  href={{
-                    pathname: `/dashboard/users/view/[id]`,
-                    query: { id: 12345 },
-                  }}
-                  as={`/dashboard/users/view/${12345}`}
-                >
-                  <GrFormView className="text-3xl cursor-pointer" />
-                </Link>
-                <Link
-                  href={{
-                    pathname: `/dashboard/users/edit/[id]`,
-                    query: {
-                      id: 2131532,
-                    },
-                  }}
-                  as={`/dashboard/users/edit/${2131532}`}
-                >
-                  <CiEdit className="text-2xl cursor-pointer" />
-                </Link>
-                <MdDelete className="text-2xl cursor-pointer" />
-              </td>
-            </tr>
-            <tr className="bg-white border-b ">
-              <th
-                scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
-              >
-                1.
-              </th>
-              <th
-                scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap "
-              >
-                John Doe
-              </th>
-              <td className="px-6 py-4">9053458214</td>
-              <td className="px-6 py-4">doe@gmail.com</td>
-              <td className="px-6 py-4">Developer</td>
-              <td className="px-6 py-4">01/07/2024</td>
-              <td className="flex py-2  items-center gap-1">
-                <Link
-                  href={{
-                    pathname: `/dashboard/users/view/[id]`,
-                    query: { id: 12345 },
-                  }}
-                  as={`/dashboard/users/view/${12345}`}
-                >
-                  <GrFormView className="text-3xl cursor-pointer" />
-                </Link>
-                <Link
-                  href={{
-                    pathname: `/dashboard/users/edit/[id]`,
-                    query: {
-                      id: 2131532,
-                    },
-                  }}
-                  as={`/dashboard/users/edit/${2131532}`}
-                >
-                  <CiEdit className="text-2xl cursor-pointer" />
-                </Link>
-                <MdDelete className="text-2xl cursor-pointer" />
-              </td>
-            </tr>
+                  {item?.name}
+                </th>
+                <td className="px-6 py-4">{item?.contact}</td>
+                <td className="px-6 py-4">{item?.email}</td>
+                <td className="px-6 py-4">{item?.designation}</td>
+                <td className="px-6 py-4">{item?.joining_date}</td>
+                <td className="flex py-2  items-center gap-1">
+                  <Link
+                    href={{
+                      pathname: `/dashboard/users/view/[id]`,
+                      query: { id: 12345 },
+                    }}
+                    as={`/dashboard/users/view/${12345}`}
+                  >
+                    <GrFormView className="text-3xl cursor-pointer" />
+                  </Link>
+                  <Link
+                    href={{
+                      pathname: `/dashboard/users/edit/[id]`,
+                      query: {
+                        id: item.emp_id,
+                      },
+                    }}
+                    as={`/dashboard/users/edit/${item.emp_id}`}
+                  >
+                    <CiEdit className="text-2xl cursor-pointer" />
+                  </Link>
+                  <MdDelete onClick={(e)=>handleDelete(e, item.emp_id)} className="text-2xl cursor-pointer" />
+                </td>
+                 </tr>)
+              })
+            }
           </tbody>
         </table>
       </div>

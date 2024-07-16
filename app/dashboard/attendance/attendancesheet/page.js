@@ -2,8 +2,6 @@
 import React, {useState} from 'react'
 import { IoReload } from "react-icons/io5";
 import Link from "next/link";
-import { MdDelete } from "react-icons/md";
-import { CiEdit } from "react-icons/ci";
 
 const Page = () => {
   const [search, setSearch] = useState("");

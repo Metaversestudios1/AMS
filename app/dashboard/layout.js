@@ -4,7 +4,7 @@ import Sidebar from "@/components/Sidebar";
 export default function DashboardLayout({ children }) {
   return (
     <html lang="en">
-      <body >
+      <body suppressHydrationWarning={true}>
         <div className="flex flex-row h-[100vh]">
           <div>
             <Sidebar /> 
